@@ -110,3 +110,5 @@ curl -X DELETE http://localhost:8080/api/posts/1
 |--------|----------|
 | 1.0.0 | Migration — CRUD на Spring Web MVC |
 | 1.1.0 | Soft delete — флаг `removed` (ветка `feature/soft-delete`) |
+
+Подробное обоснование выбора сервисного слоя — в [`Docs/06_mvc/SOFT_DELETE_RATIONALE.md`](Docs/06_mvc/SOFT_DELETE_RATIONALE.md).

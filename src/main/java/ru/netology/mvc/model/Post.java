@@ -14,12 +14,21 @@ public class Post {
     /** Текстовое содержимое поста. */
     private String content;
 
+    /** Флаг мягкого удаления: true — пост скрыт от клиентского API. */
+    private boolean removed;
+
     public Post() {
     }
 
     public Post(long id, String content) {
         this.id = id;
         this.content = content;
+    }
+
+    public Post(long id, String content, boolean removed) {
+        this.id = id;
+        this.content = content;
+        this.removed = removed;
     }
 
     public long getId() {
@@ -36,5 +45,13 @@ public class Post {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public boolean isRemoved() {
+        return removed;
+    }
+
+    public void setRemoved(boolean removed) {
+        this.removed = removed;
     }
 }
