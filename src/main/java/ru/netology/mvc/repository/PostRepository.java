@@ -60,6 +60,20 @@ public class PostRepository {
     }
 
     /**
+     * Помечает пост как удалённый (мягкое удаление).
+     *
+     * @return {@code true}, если пост найден и помечен
+     */
+    public boolean markRemoved(long id) {
+        Post post = posts.get(id);
+        if (post == null) {
+            return false;
+        }
+        post.setRemoved(true);
+        return true;
+    }
+
+    /**
      * Физически удаляет пост из хранилища.
      *
      * @return {@code true}, если пост был найден и удалён
